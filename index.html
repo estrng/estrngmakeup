@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make Up Catalog</title>
+    <base href="/" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/css/filter.css" />
+    <link rel="stylesheet" type="text/css" href="/css/catalog.css" />
+    <link rel="stylesheet" type="text/css" href="/css/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="header"><a class="logo" href="/">Estrng MakeUp</a></header>
+    <section>
+      <form class="container">
+        <div class="form-group">
+          <label for="search">Search</label>
+          <input
+            type="text"
+            class="form-control"
+            id="search"
+            placeholder="Search"
+          />
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select class="form-control" id="category">
+            <option>All</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <select class="form-control" id="brand">
+            <option>All</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating</label>
+          <select class="form-control" id="rating">
+            <option id="r1">Good Ones</option>
+            <option id="r2">Very Cheap</option>
+            <option id="r3">Expensive</option>
+            <option id="r4">A-Z</option>
+            <option id="r5">Z-A</option>
+          </select>
+        </div>
+      </form>
+    </section>
+    <section class="catalog-container">
+      <h1 id="errors"></h1>
+      <h1 id="loading"></h1>
+      <div class="products-list" id="list"></div>
+    </section>
+    <script type="module" src="/scripts/main.js"></script>
+    <script type="module" src="/http/api.js"></script>
+    <script type="module" src="/http/fetch.js"></script>
+    <script type="module" src="/http/index.js"></script>
+    <script type="module" src="/utils/format.js"></script>
+  </body>
+</html>
